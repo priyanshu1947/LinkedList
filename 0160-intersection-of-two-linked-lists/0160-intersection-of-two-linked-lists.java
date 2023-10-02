@@ -19,10 +19,18 @@ public class Solution {
         ListNode dummyHead1 = headA;
         ListNode dummyHead2 = headB;
 
-        while(dummyHead1 != dummyHead2)
-        {
-            dummyHead1 = dummyHead1 == null ? headB : dummyHead1.next;
-            dummyHead2 = dummyHead2 == null ? headA : dummyHead2.next;
+        while (dummyHead1 != dummyHead2) {
+            if (dummyHead1 == null) {
+                dummyHead1 = headB;
+            } else {
+                dummyHead1 = dummyHead1.next;
+            }
+
+            if (dummyHead2 == null) {
+                dummyHead2 = headA;
+            } else {
+                dummyHead2 = dummyHead2.next;
+            }
         }
 
         return dummyHead1;
