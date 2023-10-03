@@ -16,14 +16,11 @@ class Solution {
 
         ListNode odd;
         ListNode even;
-
+// check
         odd = head;
         even = head.next;
 
         ListNode evenHead = even;
-
-        
-
         while(even!= null && even.next !=null)
         {
            odd.next = odd.next.next;
